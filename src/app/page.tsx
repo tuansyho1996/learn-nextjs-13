@@ -1,15 +1,18 @@
-import Image from 'next/image'
-import styles from './page.module.css'
 
 import Link from 'next/link'
+import x from '../style/style.module.css';
+import y from '../style/style2.module.css'
+
 export default function Home() {
   return (
     <div>
       <ul>
-        <li>
-          <Link href='/facebook'>Facebook</Link>
+        <li className={x.color}>
+          <Link href='/facebook'>
+            <span>Facebook</span>
+          </Link>
         </li>
-        <li>
+        <li className={y.color}>
           <Link href='/youtube'>Youtube</Link>
         </li>
         <li>
