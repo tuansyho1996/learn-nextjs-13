@@ -16,7 +16,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <header>Hearder nextjs13</header>
+        <hr />
+        {children}
+        <hr />
+        <footer>Footer Nextjs13</footer>
+      </body>
     </html>
   )
 }
