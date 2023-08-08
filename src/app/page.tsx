@@ -1,7 +1,9 @@
+'use client'
 
 import Link from 'next/link'
-import x from '../style/style.module.css';
-import y from '../style/style2.module.css'
+import x from '../style/style.module.scss'
+import y from '../style/style2.module.css';
+import { Button } from 'react-bootstrap';
 
 export default function Home() {
   return (
@@ -9,7 +11,7 @@ export default function Home() {
       <ul>
         <li className={x.color}>
           <Link href='/facebook'>
-            <span>Facebook</span>
+            <span className={x.element}>Facebook</span>
           </Link>
         </li>
         <li className={y.color}>
@@ -17,6 +19,10 @@ export default function Home() {
         </li>
         <li>
           <Link href='/dashboard'>Dashboard</Link>
+        </li>
+        <li>
+          <button className='btn btn-primary'>use bootstrap</button>
+          <Button variant='primary'>use react bootstrap</Button>
         </li>
       </ul>
     </div>
