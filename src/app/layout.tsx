@@ -1,6 +1,14 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
+'use client'
 
-// import './globals.css'
+
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+// import '../style/layout.scss'
+
+
+import AppHeader from '@/components/app.header';
+import AppFooter from '@/components/app.footer';
+
 
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google';
@@ -20,11 +28,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <header>Hearder nextjs13</header>
-        <hr />
+        <header>
+          <AppHeader />
+        </header>
         {children}
-        <hr />
-        <footer>Footer Nextjs13</footer>
+        <footer>
+          <AppFooter />
+        </footer>
       </body>
     </html>
   )
