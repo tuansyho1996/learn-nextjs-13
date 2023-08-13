@@ -5,7 +5,7 @@ import useSWR from "swr";
 
 export default function Home() {
   const fetcher = (url: string) => fetch(url).then(r => r.json())
-  const { data, error } = useSWR(
+  const { data, error, isLoading } = useSWR(
     'http://localhost:8000/blogs',
     fetcher,
     {
@@ -13,11 +13,22 @@ export default function Home() {
       revalidateOnFocus: false,
       revalidateOnReconnect: false
     });
+  if (isLoading) {
+    return (
+      <div>IsLoading</div>
+    )
+  }
+  if (error) {
+    return (
+      <div>Error fetch data</div>
+    )
+  }
   console.log('check data', data)
-
   return (
     <div>
-      <AppTable />
+      <AppTable
+        blogs={data}
+      />
     </div>
   )
 }
