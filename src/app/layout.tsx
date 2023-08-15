@@ -3,6 +3,7 @@
 
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'react-toastify/dist/ReactToastify.css';
 // import '../style/layout.scss'
 
 
@@ -12,6 +13,7 @@ import AppFooter from '@/components/app.footer';
 
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google';
+import { ToastContainer } from 'react-toastify';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -35,6 +37,9 @@ export default function RootLayout({
         <footer>
           <AppFooter />
         </footer>
+        <ToastContainer
+          position="top-center"
+          autoClose={2000} />
       </body>
     </html>
   )
