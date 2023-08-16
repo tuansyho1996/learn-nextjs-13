@@ -1,10 +1,7 @@
-'use client'
-
-
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-toastify/dist/ReactToastify.css';
-// import '../style/layout.scss'
+import '../style/layout.scss'
 
 
 import AppHeader from '@/components/app.header';

@@ -5,6 +5,7 @@ import Table from 'react-bootstrap/Table';
 import { Button } from 'react-bootstrap';
 import ModalUpdate from './update.modal';
 import { useState } from 'react';
+import Link from 'next/link';
 
 
 interface Iprops {
@@ -42,7 +43,9 @@ const AppTable = (props: Iprops) => {
                     <td>{item.title}</td>
                     <td>{item.author}</td>
                     <td>
-                      <Button className='btn btn-primary me-2'>View</Button>
+                      <Button className='btn btn-primary me-2'>
+                        <Link href={`/blogs/${item.id}`}>View</Link>
+                      </Button>
                       <Button className='btn btn-warning me-2' onClick={() => handleOpenModalUpdate(item)}>Edit</Button>
                       <Button className='btn btn-danger me-2'>Delete</Button>
                     </td>
